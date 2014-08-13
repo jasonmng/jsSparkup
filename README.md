@@ -9,32 +9,34 @@ You can write HTML in a CSS-like syntax, and have jsSparkup handle the expansion
 Examples
 --------
 
-**`div`** expands to:
+**`sparkup.build('html_text_here')`** returns elements ready for dom insertion
+
+**`sparkup.build('div')`** expands to:
 
 ```html
 <div></div>
 ```
 
-**`div#header`** expands to:
+**`sparkup.build('div#header')`** expands to:
 
 ```html
     <div id="header"></div>
 ```
 
-**`div.align-left#header`** expands to:
+**`sparkup.build('div.align-left#header')`** expands to:
 
 ```html
     <div id="header" class="align-left"></div>
 ```
 
-**`div#header div#footer`** expands to:
+**`sparkup.build('div#header div#footer')`** expands to:
 
 ```html
     <div id="header"></div>
     <div id="footer"></div>
 ```
 
-**`div#menu > ul`** expands to:
+**`sparkup.build('div#menu > ul')`** expands to:
 
 ```html
     <div id="menu">
@@ -42,7 +44,7 @@ Examples
     </div>
 ```
 
-**`div#header > h1{Welcome to our site}`** expands to:
+**`sparkup.build('div#header > h1{Welcome to our site}')`** expands to:
 
 ```html
     <div id="header">
@@ -50,14 +52,14 @@ Examples
     </div>
 ```
 
-**`a[href=index.html]{Home}`** expands to:
+**`sparkup.build('a[href=index.html]{Home}')`** expands to:
 
 ```html
     <a href="index.html">Home</a>
 ```
 
 
-**`div#header > ul > li < < p{Footer}`** expands to:
+**`sparkup.build('div#header > ul > li < < p{Footer}')`** expands to:
 
 ```html
     <!-- The < symbol goes back up the parent; i.e., the opposite of >. -->
