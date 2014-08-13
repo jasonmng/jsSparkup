@@ -9,7 +9,7 @@ You can write HTML in a CSS-like syntax, and have jsSparkup handle the expansion
 Examples
 --------
 
-**`sparkup.build('html_text_here')`** returns elements ready for dom insertion
+**`sparkup.build('html_text_here')`** returns elements that you can insert into the DOM
 
 **`sparkup.build('div')`** expands to:
 
